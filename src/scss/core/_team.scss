@@ -1,0 +1,102 @@
+.about__team{
+    margin: 16px 0;
+    .team__present{
+        color: white;
+        background: #282525;
+        border: 1px solid 373434;
+        padding: 16px 16px;
+        border-radius: 10px;
+        text-align: justify;
+        .present__title{
+            text-align: center;
+            margin: auto;
+    
+            label{
+                font-weight: 100; 
+
+                border-bottom: 1px solid white;                         
+            }
+
+        }
+        p{
+            margin-top: 10px;
+        }
+
+    }
+
+    .team__member
+    {       margin-top: 20px;
+        .team__name{
+            text-align: center;
+            margin-top: 10px;
+             p{
+                width: 300px;
+                margin: auto;
+                padding: 16px 16px;
+                border-radius: 10px;
+             }
+            
+        }
+        .team--ba {
+            p
+            {
+                    background-color: #303030;
+                    color: white;
+                    
+                }
+         }
+        .team--dev {
+            p{
+                background-color: orangered;
+                color: #282525;
+
+         }       
+            }
+
+        .team--qc {
+            p{
+                background-color: skyblue;
+                    color: gray;
+             }
+        }
+        .team__infor{
+            display:flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            overflow-x: scroll;
+            color: #282525;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+        }
+
+        .BA-team{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          
+            img{
+                margin: auto;
+            }
+        }
+        .member__info{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+                img{
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                }
+
+                p{
+                    margin: 10px;
+                    font-size: 14px;
+                }
+        }
+
+    }
+}

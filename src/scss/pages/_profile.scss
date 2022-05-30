@@ -1,0 +1,50 @@
+
+@import '../core/mixins';
+.suggests__blog{
+.user__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .user__image {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            width: 150px;
+            height: 150px;
+            max-width: auto;
+            border-radius: 50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius: 50%;       
+            object-fit: cover;
+        }
+    }
+    .user__title {
+        margin-top: 20px;
+        p {
+            margin: 10px 0;
+            color: rgb(170, 170, 169);
+        }
+
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 2px rgba(31, 31, 31, 0.09);
+        border: none;
+        @include line--down(rgb(240, 37, 37));
+       &:hover {
+           background-color: bisque;
+       } 
+       a {
+           color: black;
+           text-decoration: none
+       }
+       
+        
+    }
+}
+}

@@ -1,0 +1,78 @@
+.content{
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    padding: 16px 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #ffff;
+    border-radius: 10px;
+    height: auto;
+    width: 80%;
+
+                *{
+                    margin-top: 10px;
+                }
+                .content__header{
+                    margin: 10px 0px;
+                    width: 100%;
+                    border-bottom: 1px solid  #e1e3e4;              
+
+                }
+                .content__name{
+                    color: black;
+                    font-weight: 200;
+                    background-color:transparent ;
+                    border-radius: 10px;
+                    font-size: 2vw;
+                    text-transform: capitalize; 
+                }
+                
+                .content__date{
+                    color:gray;
+                    font-weight: lighter;
+                    font-size: 11px;
+                    float:left
+                }
+                .content__img{
+
+                    height: 40%;
+                    background-repeat: no-repeat;
+                    position: relative;
+
+                     img{
+                         width: 100%;
+                         object-fit: contain;
+                         height: 250px;
+                     }
+
+
+                }
+
+                .content__info{
+                    text-align: justify;
+                    line-height: 1.7999999999999998;
+                    text-align: justify;
+                    margin-top: 0pt;
+                    margin-bottom: 6pt;
+                }
+                .content__author {
+                    display: flex;
+                    justify-content: end;
+                    font-size: 18px;
+                    margin-right: 10px;
+                    color: rgb(245, 81, 81);
+                    text-transform: capitalize;
+                }
+
+
+
+
+}
+
+@media (max-width: 1023px) {
+.content{
+    left:0;
+    right: 20px;
+    width: 100%
+}
+}

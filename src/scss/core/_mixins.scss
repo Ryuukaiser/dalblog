@@ -1,0 +1,20 @@
+@mixin line--down($color) {
+    &::after {
+        content: "";
+        position: absolute;
+        height: 0.1rem;
+        background-color: $color;
+        width:0;
+        bottom: -0.4rem;
+        right: 0;
+        transition: .25s;
+    }
+    &:hover::after {
+        position: absolute;
+        left: 0;
+        width:100%;                
+      }   
+}
+@mixin toast {
+    font-size: 16px;
+}

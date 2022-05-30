@@ -1,0 +1,235 @@
+@import '../core/mixins';
+@import '../core/variables';
+
+.lg{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family:$font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $bg-color;
+    transition: 0.5s;
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 6px;
+        background:linear-gradient(rgb(0, 238, 255), rgb(10, 199, 189));
+    }
+    .lg__toast {
+        @include toast()
+    }
+    .lg__main{
+        position: relative;
+        width: 800px;
+        height: 600px;
+        margin: 20px;
+       
+    }
+    .lg__primary {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 40px;
+        width: 100%;
+        height: 520px;
+        background-color: rgba(255,255,255,0.2);
+        box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+        border-radius: 10px;
+        .box {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h2 {
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            button{
+                cursor: pointer;
+                padding: 7px 20px;
+                color: #393E46;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 5px 0;
+                   border: none;
+                border-radius: 10px;     
+               &:hover {
+                   background-color: white;
+                   border: 2px solid #00ADB5;
+                   
+               } 
+            }
+        }
+       
+    }
+    .lg__formBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #EEEEEE;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+        transition: 0.5s ease-in-out;
+        overflow: hidden;
+        border-radius: 10px;
+        &.active {
+            left: 50%;
+            .signinForm{
+                left: -100%;
+                transition-delay: 0s;
+            }
+            .signupForm{
+                transition-delay: 0.25s;
+                left: 0;
+            }
+        }
+
+        .form{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 50px;
+            transition: 0.5s;
+            .flex{
+                display: flex;
+                align-items: center;
+                .first_name {
+                    width: auto;
+                    margin-right: 20px;
+                }
+                input {
+                    width: 100%;
+                }
+              
+            }
+            form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &.none {
+                    display: none;
+                }
+                input{
+                    width: 100%;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                    outline: none;
+                    font-size: 15px;
+                    border: 1px solid $bg-color;
+                    border-radius: 10px;
+                }
+                h3 {
+                    color: #393E46;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: #2f3542;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: 15px;
+                    color: #393E46;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                button {
+                    position: relative;
+                    cursor: pointer;
+                    padding: 7px 20px;
+                    color: #393E46;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 10px 0;
+                    border: 1px solid #00ADB5;   
+                    border-radius: 10px;     
+                   &:hover {
+                       background-color: #00ADB5;
+                       color: white;
+                   }
+                   &.cancel{
+                       margin-left: 30px;
+                       width: 100px;
+                   } 
+                }
+                .form-message {
+                    font-size:  14px;
+                    color: rgb(247, 25, 25);
+                }
+                .forgot {
+                    width: 120px;
+                    font-size: 14px;
+                }
+               
+            }
+
+        }
+        .signinForm{
+            transition-delay: 0.25s;
+            
+            .emailform {
+                transition-delay: 0.25s;
+            }
+        }
+        .signupForm{
+            transition-delay: 0s;
+            left: 100%;
+        }
+        &.reset_password {
+            height: 50%;
+        }
+    }
+
+    
+}
+
+/*reponsive*/
+@media (max-width: 1023px) {
+    .lg {
+        .lg__main {
+            max-width: 400px;
+            height: 650px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lg__primary {
+            top: 0;
+            height: 100%;
+            .box{
+                position: absolute;
+                width: 100%;
+                height: 150px;
+                bottom: 0;
+                &.signin {
+                    top: 0;
+                }
+            }
+        }
+        .lg__formBx{
+        height: 530px;
+        width: 100%;
+        top: 0;
+        box-shadow: none;
+        &.active {
+            left: 0;
+            top: 150px;
+        }
+        
+        
+        }
+
+    }
+}
