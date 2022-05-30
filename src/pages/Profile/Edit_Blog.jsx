@@ -19,7 +19,7 @@ const Edit_Blog = () => {
      up.append('category', category);
      up.append('content', content)
      up.append('image',image)
-    fetch('http://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
+    fetch('https://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
       method:'POST',
       headers: {
        'Authorization': `Bearer ${JSON.parse(local)}` , 
@@ -41,7 +41,7 @@ const Edit_Blog = () => {
   console.log("id", array)
   const getBlog = async (id) => {
     try {
-      const response = await fetch(`http://nhatphidev2k.pythonanywhere.com/api/v1/post/detail/${id}/`,
+      const response = await fetch(`https://nhatphidev2k.pythonanywhere.com/api/v1/post/detail/${id}/`,
       {
         method:"GET"
       })
@@ -64,7 +64,7 @@ const [image, setimage] = useState();
 
   const getLists = async () => {
     try {
-      const response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
+      const response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
       const data = await response.json();
       setAdvice(data);
     } catch (error) {
@@ -88,7 +88,7 @@ const [image, setimage] = useState();
     //  up.append('content', content)
     //  up.append('image',image)
      console.log(title)
-    // fetch('http://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
+    // fetch('https://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
     //   method:'PATH',
     //   headers: {
     //    'Authorization': `Bearer ${JSON.parse(local)}` , 

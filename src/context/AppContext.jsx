@@ -23,7 +23,7 @@ export const AppProvider = ({ children }) => {
   //   let loginUser = async (e) => {
   //     // e.preventDefault()
   //     console.log("form", e);
-  //     let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/user/login/", {
+  //     let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/user/login/", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json"
@@ -44,7 +44,7 @@ export const AppProvider = ({ children }) => {
   //   };
   //   let signinUser = async (e) => {
   //     console.log("form-resg", e);
-  //     let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/user/register/", {
+  //     let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/user/register/", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json"
@@ -72,7 +72,7 @@ export const AppProvider = ({ children }) => {
   //   let resetPassword = async (e) => {
   //     e.preventDefault();
   //     console.log("form-resg", e.target.useremail.value);
-  //     let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/user/send-reset-password-email/", {
+  //     let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/user/send-reset-password-email/", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json"
@@ -91,7 +91,7 @@ export const AppProvider = ({ children }) => {
   //   let changePassword = async (e) => {
   //     // e.preventDefault()
   //     console.log("test", e.url);
-  //     let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/user/reset-password/" + e.url, {
+  //     let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/user/reset-password/" + e.url, {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json"
@@ -116,7 +116,7 @@ export const AppProvider = ({ children }) => {
   //   };
 
   //   let updateToken = async () => {
-  //     let response = fetch("http:/ddang nhap o day/refresh", {
+  //     let response = fetch("https:/ddang nhap o day/refresh", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json"

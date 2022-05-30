@@ -29,7 +29,7 @@ const CreateBlog = () => {
      up.append('category', category.substring(0,1));
      up.append('content', content)
      up.append('image',image)
-     fetch('http://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
+     fetch('https://nhatphidev2k.pythonanywhere.com/api/v1/post/list/', {
       method:'POST',
       headers: {
        'Authorization': `Bearer ${JSON.parse(local)}` , 
@@ -66,7 +66,7 @@ const CreateBlog = () => {
   
   const getLists = async () => {
     try {
-      const response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
+      const response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
       const data = await response.json();
       setAdvice(data);
     } catch (error) {

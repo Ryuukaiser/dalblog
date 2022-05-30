@@ -15,7 +15,7 @@ const Category = () => {
   }
   let array = usePageViews();
   let getListCategory = async (id) => {
-    let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/categories/" + id, {
+    let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/categories/" + id, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

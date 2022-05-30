@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
   let loginUser = async (e) => {
 
     console.log("form", e);
-    let response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/login/", {
+    let response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
   };
   let signinUser = async (e) => {
     console.log("form-resg", e);
-    let response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/register/", {
+    let response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }) => {
   let resetPassword = async (e) => {
     e.preventDefault();
     console.log("form-resg", e.target.useremail.value);
-    let response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/send-reset-password-email/", {
+    let response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/send-reset-password-email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
   let changePassword = async (e) => {
     // e.preventDefault()
     console.log("test", e.url);
-    let response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/reset-password/" + e.url, {
+    let response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/reset-password/" + e.url, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
@@ -110,7 +110,7 @@ export const AuthProvider = ({ children }) => {
     console.log(e)
       const local = localStorage.getItem("authTokens")
       try {
-        const response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/changepassword/", 
+        const response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/changepassword/", 
         {
           method: "PATCH",
           headers: {
@@ -137,7 +137,7 @@ export const AuthProvider = ({ children }) => {
 
 
   let updateToken = async () => {
-    let response = fetch("http:/ddang nhap o day/refresh", {
+    let response = fetch("https:/ddang nhap o day/refresh", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -153,7 +153,7 @@ export const AuthProvider = ({ children }) => {
     let array ={category: e.category, title: e.title, content: e.content, image: e.image[0]}
     console.log(array)
     try {
-      const response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/post/list/", 
+      const response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/post/list/", 
       {
         method: "POST",
         headers: {

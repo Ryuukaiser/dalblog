@@ -27,7 +27,7 @@ const Profile = () => {
   let {logoutUser} = useContext(AuthContext);
   const getUser = async () => {
     try {
-      const response = await fetch("http://nhatphidev2k.pythonanywhere.com/user/profile/", 
+      const response = await fetch("https://nhatphidev2k.pythonanywhere.com/user/profile/", 
       {
         method: "GET",
         headers: {
@@ -48,7 +48,7 @@ const Profile = () => {
 
   const getBlog = async () => {
     try {
-      const response = await fetch(`http://nhatphidev2k.pythonanywhere.com/api/v1/post/${user.id}/user/?page=1`)
+      const response = await fetch(`https://nhatphidev2k.pythonanywhere.com/api/v1/post/${user.id}/user/?page=1`)
       const data = await response.json();
       setBlog(data.results);
     } 
@@ -66,7 +66,7 @@ console.log("blog", blog)
       console.log("id", e)
         const local = localStorage.getItem("authTokens")
         try {
-          const response = await fetch(`http://nhatphidev2k.pythonanywhere.com/api/v1/post/delete/${e}`, 
+          const response = await fetch(`https://nhatphidev2k.pythonanywhere.com/api/v1/post/delete/${e}`, 
           {
             method: "DELETE",
             headers: {
@@ -139,7 +139,7 @@ const lists = () => {
               <div className="suggests__blog">
               <div className="user__item">
         <div  className="user__image" >                          
-          <img src={"http://nhatphidev2k.pythonanywhere.com/"+ user.avatar} alt=""/>    
+          <img src={"https://nhatphidev2k.pythonanywhere.com/"+ user.avatar} alt=""/>    
       </div>                        
       <div  className="user__title" >                          
           <h3>

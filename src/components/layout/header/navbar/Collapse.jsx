@@ -24,7 +24,7 @@ function Collapse() {
   
   const getLists = async () => {
     try {
-      const response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
+      const response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/categories/");
       const data = await response.json();
       setAdvice(data);
     } catch (error) {

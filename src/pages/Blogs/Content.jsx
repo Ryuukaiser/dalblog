@@ -34,7 +34,7 @@ export const  Content= () => {
   }
 let array = usePageViews();
 let getBlog = async (id) => {
-  let response = await fetch("http://nhatphidev2k.pythonanywhere.com/api/v1/post/detail/" + id, {
+  let response = await fetch("https://nhatphidev2k.pythonanywhere.com/api/v1/post/detail/" + id, {
     method: "GET",
     headers: {
       "Content-Type": "application/json"

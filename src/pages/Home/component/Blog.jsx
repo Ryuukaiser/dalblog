@@ -12,7 +12,7 @@ function Blog() {
         useEffect(() => {
         let getLists = async () => {
           try {
-            const response = await fetch(`http://nhatphidev2k.pythonanywhere.com/api/v1/post/list/?page=${page}`);
+            const response = await fetch(`https://nhatphidev2k.pythonanywhere.com/api/v1/post/list/?page=${page}`);
             const data = await response.json();
             setAdvice(data.results);
             setCount(data.count)
