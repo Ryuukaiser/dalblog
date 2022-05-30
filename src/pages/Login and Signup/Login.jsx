@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import yup from "./yupGlobal";
 import Signup from "./Signup";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "context/AuthContext";
 
 export default function Login() {
     const [active, setAcitve]= useState(false)
