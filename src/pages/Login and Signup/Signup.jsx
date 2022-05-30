@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import yup from "./yupGlobal";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "context/AuthContext";
 export default function Signup() {
   
     const schema = yup.object().shape({

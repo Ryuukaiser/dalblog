@@ -7,7 +7,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 
 import yup from 'pages/Login and Signup/yupGlobal';
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "context/AuthContext";
 
 const CreateBlog = () => {  
 

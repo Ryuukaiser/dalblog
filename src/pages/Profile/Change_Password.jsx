@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 
 import yup from '../Login and Signup/yupGlobal'
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "context/AuthContext";
 const Change_Password = () => {
     const schema = yup.object().shape({
         password: yup.string()
